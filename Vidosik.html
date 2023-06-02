@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .text_video {
+            margin: 50px;
+            font-size: 30px;
+        }
+        .video {
+            position: relative;
+            height: 800px;
+            margin: 10% 0 10%;
+            margin-left: 12%;
+            top: -200px;
+        }
+        .content {
+            margin-left: 20px;
+            color: black;
+            background-color: white;
+            text-decoration: none;
+            position: relative;
+            top: -30px;
+            
+        }
+        .text {
+            top: 100px;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        .rule {
+            border: 1px none;
+            border-radius: 15px;
+            margin-left: 20px;
+        }
+        ul.nav{
+            margin-left: 0px;
+            padding-left: 0px;
+            list-style: none;
+        }
+        ul.nav a {
+            display: block;
+            width: 7em;
+            padding:10px;
+            background-color: #f4f4f4;
+            border-top: 1px dashed #333;
+            border-right: 1px dashed #333;
+            border-left: 5px solid #333;
+            text-decoration: none;
+            color: #333;
+        }
+        ul.nav li:last-child a {
+            border-bottom: 1px dashed #333;
+        }
+    </style>
+    <script>
+        function ruleon() {
+            let screens = document.getElementsByClassName('rule')
+            screens[0].style.display = 'none';
+            screens[1].style.display = 'block';
+        }
+
+        function ruleof() {
+            let screens = document.getElementsByClassName('rule')
+            screens[1].style.display = 'none';
+            screens[0].style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="rule" style="position: relative; text-align: left; top: 10px; right: -20px; cursor: pointer;" >
+            <div onclick="ruleon()"><img src="logo.PNG" height="60px"></div>
+        </div>
+        <div class="rule" style="position: relative; text-align: left; top: 10px; right: -20px; display: none; cursor: pointer;" >
+            <div onclick="ruleof()"><img src="logo.PNG" height="60px top5px"></div> 
+            <ul class="nav">
+                <li><a href="Vlados_glav.html">Главная</a></li>
+                <li><a href="osnov_fin.html">Основные финансовые показатели</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="Vidosik.html">Видео</a></li>
+            </ul>
+        </div>
+        <div style="position: fixed; top: 10px; right: 20px;">
+            НГТУ, ФБ-12, РГЗ, Козицкий Владислав
+        </div>
+    </header>
+
+    <div class="text_video">
+        <b>Как устроен завод «НЕФАЗ», где делают автобусы и электробусы? Экскурсия по предприятию</b>
+    </div>
+    <video controls = 'controls' class="video" poster="logo_video.PNG">
+        <source src="video_NEFAZ.mp4">
+    </video>
+
+    <footer>
+        <div>&copy; Козицкий Владислав, ФБИ-12, 2 курс, 2023</div>
+    </footer>
+    
+</body>
+</html>
