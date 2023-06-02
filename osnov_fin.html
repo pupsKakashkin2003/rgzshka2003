@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .text {
+            top: 100px;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        .rule {
+            border: 1px none;
+            border-radius: 15px;
+            margin-left: 20px;
+        }
+        .table {
+        border: 1 solid;
+        border-radius: 15px;
+        margin: 30px;
+        margin-left: 50px;
+        width: 600px;
+        height: 30%;
+        display: inline-flexbox;
+        }
+
+        .rub:after {
+            content: ' \20BD';
+        }
+        .text {
+            margin: 50px;
+            color: black;
+            text-align: center;
+        }
+        .block {
+            display: flexbox;
+            padding: 10px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            border: 1px solid;
+            border-radius: 15px;
+            border-color: white;
+            background-color: white;
+            margin-top: 0px;
+            box-shadow: 0 0 5px 2px rgb(170, 168, 168);
+            position: static;
+            height: 100px;
+            width: 400px;
+            justify-content: center;
+            
+        }
+        .content {
+            margin-left: 20px;
+            color: black;
+            background-color: white;
+            text-decoration: none;
+            position: relative;
+            top: -30px;
+            
+        }
+        
+        ul.nav{
+            margin-left: 0px;
+            padding-left: 0px;
+            list-style: none;
+        }
+        ul.nav a {
+            display: block;
+            width: 7em;
+            padding:10px;
+            background-color: #f4f4f4;
+            border-top: 1px dashed #333;
+            border-right: 1px dashed #333;
+            border-left: 5px solid #333;
+            text-decoration: none;
+            color: #333;
+        }
+        ul.nav li:last-child a {
+            border-bottom: 1px dashed #333;
+        }
+        .info {
+        background-color: #ffffff;
+        padding: 10px 25px;
+        }
+
+        .info__switch {
+        display: none;
+        }
+
+        .info__body {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s;
+        }
+
+        .info__switch:checked~.info__body {
+        max-height: 800px;
+        }
+
+        .info__headline::before {
+        content: "";
+        position: absolute;
+        left: -18px;
+        top: 4px;
+        border: 6px solid #39739d;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        }
+    </style>
+    <script>
+        function ruleon() {
+            let screens = document.getElementsByClassName('rule')
+            screens[0].style.display = 'none';
+            screens[1].style.display = 'block';
+        }
+
+        function ruleof() {
+            let screens = document.getElementsByClassName('rule')
+            screens[1].style.display = 'none';
+            screens[0].style.display = 'block';
+
+        }
+        function chiferki() {
+            let exchange = [348, 343.5, 383, 381, 375, 381.5, 377.5, 377.5, 370, 377, 387, 383.5, 374.5, 375.5, 394.5, 405.5, 419.5, 404.5, 403, 400]
+            
+            let sum = 0
+            for(let i = 0; i < exchange.length; i++) {
+                sum = sum + exchange[i];
+            }
+            let average = sum / exchange.length;
+            let standdev = Math.sqrt(average)
+            let min = Math.min.apply(Math, exchange)
+            let max = Math.max.apply(Math, exchange)
+
+            document.getElementById('stad').innerHTML = standdev;
+            document.getElementById('max').innerHTML = max;
+            document.getElementById('min').innerHTML = min;
+        }
+    
+    </script>
+</head>
+<body onload="chiferki()">
+    <header>
+        <div class="rule" style="position: relative; text-align: left; top: 10px; right: -20px; cursor: pointer;" >
+            <div onclick="ruleon()"><img src="logo.PNG" height="60px"></div>
+        </div>
+        <div class="rule" style="position: relative; text-align: left; top: 10px; right: -20px; display: none; cursor: pointer;" >
+            <div onclick="ruleof()"><img src="logo.PNG" height="60px top5px"></div> 
+            <ul class="nav">
+                <li><a href="Vlados_glav.html">Главная</a></li>
+                <li><a href="osnov_fin.html">Основные финансовые показатели</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="Vidosik.html">Видео</a></li>
+            </ul>
+        </div>
+        <div style="position: fixed; top: 10px; right: 20px;">
+            НГТУ, ФБ-12, РГЗ, Козицкий Владислав
+        </div>
+    </header>
+    <div class="text" style="font-size: 28px;">
+        <b>Основные финансовые показатели.</b>
+    </div>
+    <div class="text">
+        <p>
+            На странице вы можете ознакомится с основными финансовыми показателями компании <b>ПАО "<i>«Нефаз»</i>"</b>.
+        </p>
+        <a href="https://www.moex.com/ru/marketdata/?nc=505450#/mode=instrument&secid=TTLK&boardgroupid=57&mode_type=history&date_from=2018-04-01&date_till=2023-04-30">
+            Источник - Московская фондовая биржа
+        </a>
+    </div>
+    <div class="block">
+        <b style="font-size: 20px;">Капитализация на конец Апреля 2023г.</b>
+            <div class="rub" style="padding: 20px; font-size: 24px;">
+                <b>2 335 310 000</b> 
+            </div>
+    </div>  
+    <div class="block" style="font-size: 20px;">
+        <b>Общее число акций Апреля 2023г.</b>
+            <div style="padding: 20px; font-size: 24px;">
+                <b>146 284 <span style="color: gray; font-size: 20px;">шт</span></b>
+            </div>
+    </div>
+    <div class="info" style="margin-left: 440px; margin-right: 20%;">
+        <input id="info__body_8" class="info__switch" type="checkbox">
+        <label for="info__body_8" class="info__headline" style="font-size: 24px; border-bottom: dotted #000;text-decoration: none;">Таблица - "Цена акция Нефаз по дням за Апрель 2023г"</label>
+        <div class="info__body">
+            <table class="table" border="1 solid" >
+                <tr>
+                    <th>Дата</th>
+                    <th>Цена</th>
+                </tr>
+                <tr><td>03.04.2023</td><td>348</td></tr>
+                <tr><td>04.04.2023</td><td>343.5</td></tr>
+                <tr><td>05.04.2023</td><td>383</td></tr>
+                <tr><td>06.04.2023</td><td>381</td></tr>
+                <tr><td>07.04.2023</td><td>375</td></tr>
+                <tr><td>10.04.2023</td><td>381.5</td></tr>
+                <tr><td>11.04.2023</td><td>377.5</td></tr>
+                <tr><td>12.04.2023</td><td>371.5</td></tr>
+                <tr><td>13.04.2023</td><td>370</td></tr>
+                <tr><td>14.04.2023</td><td>377</td></tr>
+                <tr><td>17.04.2023</td><td>387</td></tr>
+                <tr><td>18.04.2023</td><td>383.5</td></tr>
+                <tr><td>19.04.2023</td><td>374.5</td></tr>
+                <tr><td>20.04.2023</td><td>375.5</td></tr>
+                <tr><td>21.04.2023</td><td>394.5</td></tr>
+                <tr><td>24.04.2023</td><td>405.5</td></tr>
+                <tr><td>25.04.2023</td><td>419.5</td></tr>
+                <tr><td>26.04.2023</td><td>404.5</td></tr>
+                <tr><td>27.04.2023</td><td>403</td></tr>
+                <tr><td>28.04.2023</td><td>400</td></tr>
+            </table>     
+
+        </div>
+      </div>
+            
+    <div class="text" style="font-size: 24px;">
+        <b>Расчётные значения на основе цен закрытие торгов:</b>
+    </div>
+            
+    <div class="block">
+        <b style="font-size: 20px;">Минимальное значение:</b>
+            <div id="min" class="rub" style="padding: 20px; font-size: 24px;">
+                
+            </div>
+    </div>
+
+    <div class="block">
+        <b style="font-size: 20px;">Максимальное значение:</b>
+            <div id="max" class="rub" style="padding: 20px; font-size: 24px;">
+                
+            </div>
+    </div>
+
+    <div class="block">
+        <b style="font-size: 20px;">Среднеквадратическое отклонение:</b>
+            <div id="stad" style="padding: 20px; font-size: 24px;">
+            </div>
+    </div>
+    <footer>
+        <div>&copy; Козицкий Владислав, ФБИ-12, 2 курс, 2023</div>
+    </footer>
+    
+</body>
+</html>

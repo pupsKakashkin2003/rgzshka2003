@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .map-responsive{
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+        }
+        .map-responsive iframe{
+            left:20%;
+            top:20%;
+            height:60%;
+            width:60%;
+            position:absolute;
+        }
+        .info {
+        background-color: #ffffff;
+        padding: 10px 25px;
+        }
+
+        .info__switch {
+        display: none;
+        }
+
+        .info__body {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s;
+        }
+
+        .info__switch:checked~.info__body {
+        max-height: 800px;
+        }
+
+        .info__headline::before {
+        content: "";
+        position: absolute;
+        left: -18px;
+        top: 4px;
+        border: 6px solid #39739d;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        }
+        .text {
+            top: 100px;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        .rule {
+            border: 1px none;
+            border-radius: 15px;
+            margin-left: 20px;
+        }
+        ul.nav{
+            margin-left: 0px;
+            padding-left: 0px;
+            list-style: none;
+        }
+        ul.nav a {
+            display: block;
+            width: 7em;
+            padding:10px;
+            background-color: #f4f4f4;
+            border-top: 1px dashed #333;
+            border-right: 1px dashed #333;
+            border-left: 5px solid #333;
+            text-decoration: none;
+            color: #333;
+        }
+        ul.nav li:last-child a {
+            border-bottom: 1px dashed #333;
+        }
+    </style>
+    <script>
+        function ruleon() {
+            let screens = document.getElementsByClassName('rule')
+            screens[0].style.display = 'none';
+            screens[1].style.display = 'block';
+        }
+
+        function ruleof() {
+            let screens = document.getElementsByClassName('rule')
+            screens[1].style.display = 'none';
+            screens[0].style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="rule" style="position: relative; text-align: left; top: 10px; right: -20px; cursor: pointer;" >
+            <div onclick="ruleon()"><img src="logo.PNG" height="60px"></div>
+        </div>
+        <div class="rule" style="position: relative; text-align: left; top: 10px; right: -20px; display: none; cursor: pointer;" >
+            <div onclick="ruleof()"><img src="logo.PNG" height="60px"></div> 
+            <ul class="nav">
+                <li><a href="Vlados_glav.html">Главная</a></li>
+                <li><a href="osnov_fin.html">Основные финансовые показатели</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="Vidosik.html">Видео</a></li>
+            </ul>
+        </div>
+        <div style="position: fixed; top: 10px; right: 20px;">
+            НГТУ, ФБ-12, РГЗ, Козицкий Владислав
+        </div>
+    </header>
+
+    <div class="text" style="top: 30px; font-size: 40px; font-family: sans-serif;">
+        КОНТАКТЫ
+    </div>
+    <div class="info" style="margin-left: 440px; margin-right: 20%; margin-top: 50px;">
+        <input id="info__body_1" class="info__switch" type="checkbox">
+        <label for="info__body_1" class="info__headline" style="font-size: 24px; border-bottom: dotted #000;text-decoration: none;"><b>ОТДЕЛ СБЫТА</b></label>
+        <div class="info__body">
+            <p>
+                Ахияров Инсаф Илфатович
+                <br/>
+                Начальник отдела сбыта
+                <br/>
+                Телефон:    (34783) 6-33-77
+                <br/>
+                e-mail:    Ahiyarov_II@nefaz.ru
+                <br/>
+            </p>
+            
+            <p>
+                Стерлядев Алексей Витальевич
+                <br/>
+                Заместитель начальника отдела сбыта - руководитель группы
+                <br/>
+                Телефон:    (34783) 2-34-69, 6-31-46
+                <br/>
+                Факс:    (34783) 2-34-69
+                <br/>
+                e-mail:    sterlyadev.dp@nefaz.ru
+                <br/>
+            </p>
+            <p>
+                Красноперова Марина Анатольевна
+                <br/>
+                Ведущий специалист группы по продвижению запасных частей
+                <br/>
+                Телефон:    (34783) 6-33-45, 2-27-27
+                <br/>
+                e-mail:    zp@nefaz.ru
+                <br/>
+                ICQ:    479-115-726
+                <br/>
+            </p>
+            <p>
+                Кокорина Индира Шайхинуровна
+                <br/>
+                Ведущий специалист группы по продвижению запасных частей
+                <br/>
+                Телефон:    (34783) 6-38-70
+                <br/>
+                e-mail:    kokorina.os@nefaz.ru
+                <br/>
+            </p>
+            
+            <p>
+                Вахитов Алмаз Флюсович
+                <br/>
+                Ведущий специалист по продажам
+                <br/>
+                Телефон:    (34783) 2-27-75, 6-33-64
+                <br/>
+                Факс:    (34783) 2-27-75
+                <br/>
+                e-mail:    vaxitov.os@nefaz.ru
+                <br/>
+            </p>
+
+            <p>
+                Решитова Ольга Валерьевна
+                <br/>
+                Решитова Ольга Валерьевна
+                <br/>
+                Телефон:    (34783) 2-27-07, 6-31-46
+                <br/>
+                Факс:    (34783) 2-34-69
+                <br/>
+                e-mail:    reshitova.op@nefaz.ru
+                <br/>
+            </p>
+
+            <p>
+                Зимин Алексей Юрьевич
+                <br/>
+                Специалист по продажам
+                <br/>
+                Специалист по продажам
+                <br/>
+                e-mail:    zimin.omrds@nefaz.ru
+                <br/>
+            </p>
+      
+        </div>
+      </div>
+
+
+      <div class="info" style="margin-left: 440px; margin-right: 25%;">
+        <input id="info__body_2" class="info__switch" type="checkbox">
+        <label for="info__body_2" class="info__headline" style="font-size: 24px; border-bottom: dotted #000;text-decoration: none;"><b>РУКОВОДСТВО</b></label>
+        <div class="info__body">
+            <p>
+                Курганов Владимир Александрович
+                <br/>
+                Генеральный директор
+                <br/>
+                Телефон:    (34783) 6-22-56
+                <br/>
+                Факс:    (34783) 2-32-16
+                <br/>
+                e-mail:    nefaz@nefaz.ru
+                <br/>
+            </p>
+            
+            <p>
+                Валиахметов Денис Маратович
+                <br/>
+                Заместитель генерального директора по безопасности
+                <br/>
+                Приемная:    (34783) 6-20-16
+                <br/>
+                e-mail:    pr-nefaz-cust@nefaz.ru
+                <br/>
+            </p>
+            <p>
+                Акимов Денис Юрьевич
+                <br/>
+                Заместитель генерального директора по коммерции
+                <br/>
+                Телефон:    (34783) 6-20-16
+                <br/>
+                e-mail:    pr-nefaz-cust@nefaz.ru
+                <br/>
+            </p>
+            <p>
+                Хазиев Борис Илюсевич
+                <br/>
+                Заместитель генерального директора - директор по производству
+                <br/>
+                Телефон:    (34783) 6-22-66
+                <br/>
+                e-mail:    KhazievBI@nefaz.ru
+                <br/>
+            </p>
+            
+            <p>
+                Корепанов Евгений Борисович
+                <br/>
+                Заместитель генерального директора - директор по развитию
+                <br/>
+                Телефон:    (34783) 6-22-01
+                <br/>
+                Приемная:    (34783) 6-36-19
+                <br/>
+                e-mail:    korepanov@kamaz.ru
+                <br/>
+            </p>
+
+            <p>
+                Мухаметдинов Юрис Абелгасович
+                <br/>
+                Заместитель генерального директора по управлению персоналом
+                <br/>
+                Приемная:    (34783) 6-25-17
+                <br/>
+                e-mail:    MuhametdinovYA@nefaz.ru
+                <br/>
+            </p>
+      
+        </div>
+      </div>
+
+      <div class="info" style="margin-left: 440px; margin-right: 20%;">
+        <input id="info__body_3" class="info__switch" type="checkbox">
+        <label for="info__body_3" class="info__headline" style="font-size: 24px; border-bottom: dotted #000;text-decoration: none;"><b>ОТДЕЛ КАДРОВ</b></label>
+        <div class="info__body">
+            <p>
+                Информация по вакансиям
+                <br/>
+                Телефон: 8 (34783) 6-22-74
+            </p>
+      
+        </div>
+      </div>
+      <div class="info" style="margin-left: 440px; margin-right: 20%;">
+        <input id="info__body_4" class="info__switch" type="checkbox">
+        <label for="info__body_4" class="info__headline" style="font-size: 24px; border-bottom: dotted #000;text-decoration: none;"><b>ПОДРАЗДЕЛЕНИЕ АО "ТФК "КАМАЗ" ДИРЕКТОРА ПО ПЛАНИРОВАНИЮ, ПРИЕМКЕ И ОТГРУЗКЕ ТЕХНИКИ НЕФАЗ В Г. НЕФТЕКАМСК</b></label>
+        <div class="info__body">
+            <p>
+                Смолин Владимир Александрович
+                <br/>
+                Директор по планированию, приемке и отгрузке техники НЕФАЗ в г. Нефтекамск
+                <br/>
+                Телефон:    (34783) 6-38-69
+                <br/>
+                e-mail:    SmolinVA@nefaz.ru
+                <br/>
+            </p>
+      
+        </div>
+      </div>
+
+      <div class="info" style="margin-left: 440px; margin-right: 20%;">
+        <input id="info__body_5" class="info__switch" type="checkbox">
+        <label for="info__body_5" class="info__headline" style="font-size: 24px; border-bottom: dotted #000;text-decoration: none;">– Бюро планирования и доставки прицепной и специальной техники</label>
+        <div class="info__body">
+            <p>
+                Донцов Юрий Михайлович
+                <br/>
+                Главный специалист по планированию и контролю производства прицепной техники
+                <br/>
+                Телефон:    (34783) 6-39-36
+                <br/>
+                e-mail:    dontsovyu@nefaz.ru
+                <br/>
+            </p>
+
+            <p>
+                Фазылбиков Марсель Фидарисович
+                <br/>
+                Начальник бюро
+                <br/>
+                Телефон:    (34783) 6-38-51
+                <br/>
+                e-mail:    FazylbikovMF@nefaz.ru
+                <br/>
+            </p>
+
+            <p>
+                Гареев Айрат Ахнафович
+                <br/>
+                Ведущий специалист по планированию и доставке прицепной техники
+                <br/>
+                Телефон:    (34783) 6-25-34
+                <br/>
+                e-mail:    GareevAA@nefaz.ru
+                <br/>
+            </p>
+      
+        </div>
+      </div>
+
+      <div class="info" style="margin-left: 440px; margin-right: 20%;">
+        <input id="info__body_6" class="info__switch" type="checkbox">
+        <label for="info__body_6" class="info__headline" style="font-size: 24px; border-bottom: dotted #000;text-decoration: none;">– Участок приемки и отгрузки прицепной техники НЕФАЗ в г. Нефтекамск</label>
+        <div class="info__body">
+            <p>
+                Галиев Илдус Гарифович
+                <br/>
+                Начальник участка приемки и отгрузки прицепной и специальной техники НЕФАЗ
+                <br/>
+                Телефон:    (34783) 6-24-24
+                <br/>
+                e-mail:    GalievIG@nefaz.ru
+                <br/>
+            </p>
+
+            <p>
+                Салимьянов Альберт Ангамович
+                <br/>
+                Старший мастер
+                <br/>
+                Телефон:    (34783) 6-23-24
+                <br/>
+                e-mail:    caa@nefaz.ru
+                <br/>
+            </p>
+        </div>
+      </div>
+
+      <div class="info" style="margin-left: 440px; margin-right: 20%;">
+        <input id="info__body_7" class="info__switch" type="checkbox">
+        <label for="info__body_7" class="info__headline" style="font-size: 24px; border-bottom: dotted #000;text-decoration: none;">ГРУППА ГАРАНТИЙНОГО И СЕРВИСНОГО ОБСЛУЖИВАНИЯ</label>
+        <div class="info__body">
+            <p>
+                Гайнутдинова Светлана Викторовна
+                <br/>
+                Ведущий инженер
+                <br/>
+                Телефон:    (34783) 2-01-35
+                <br/>
+            </p>
+
+            <p>
+                Гайнетдинова Динара Явдатовна
+                <br/>
+                Специалист (Развитие сервисной сети)
+                <br/>
+                Телефон:    (34783) 6-27-71
+                <br/>
+            </p>
+        </div>
+      </div>
+
+      <div class="info" style="margin-left: 440px; margin-right: 20%;">
+        <input id="info__body_8" class="info__switch" type="checkbox">
+        <label for="info__body_8" class="info__headline" style="font-size: 24px; border-bottom: dotted #000;text-decoration: none;">СТАНЦИЯ ТЕХОБСЛУЖИВАНИЯ</label>
+        <div class="info__body">
+            <p>
+                Идиятуллин Артур Алмазович
+                <br/>
+                Начальник станции технического обслуживания (СТО)
+                <br/>
+                e-mail:    idiyatullin.ceh24@nefaz.ru
+                <br/>
+            </p>
+
+            <p>
+                Габдрахманов Ринат Мугалимович
+                <br/>
+                Ведущий специалист станции технического обслуживания (СТО)
+                <br/>
+                Телефон:    (34783) 6-21-88
+                <br/>
+                e-mail:    ogiso8@nefaz.ru
+                <br/>
+            </p>
+
+            <p>
+                Коровина Лариса Насимяновна
+                <br/>
+                Cпециалист станции технического обслуживания (СТО)
+                <br/>
+                Телефон:    (34783) 6-26-10
+                <br/>
+                Телефон:    (34783) 6-26-10
+                <br/>
+            </p>
+        </div>
+      </div>
+      
+    <div class="text" style="top: 30px; font-size: 24px; font-family: sans-serif; top: 40px;">
+        <p>
+            <b>СПРАВОЧНАЯ ИНФОРМАЦИЯ О ДОПУСКЕ ТРАНСПОРТНЫХ СРЕДСТВ К ПЕРЕВОЗКЕ ОПАСНЫХ ГРУЗОВ СОГЛАСНО ПРИКАЗУ МВД РОССИИ ОТ 29.11.2017 Г. №900</b>
+        </p>
+        <p>
+            19 марта 2018 года на официальном интернет-портале правовой информации (pravo.gov.ru) опубликовано постановление Правительства 
+            Российской Федерации от 16 марта 2018 г. № 285 «О применении положений пункта 3 Правил перевозок грузов автомобильным транспортом».
+            <img src="Zaevlenie.jpg" height="600", weight="45%" style="margin-left: 30%; margin-right: 30%;">
+        </p>
+        <p>
+            Согласно указанному Постановлению, до 1 января 2019 года на территории Российской Федерации требования 
+            подразделов 6.8.2.3 и 6.8.2.4 приложения «А» Европейского соглашения о международной дорожной перевозке 
+            опасных грузов от 30 сентября 1957 г. (ДОПОГ) в отношении свидетельств об официальном утверждении типа 
+            цистерны и об испытании или проверке цистерны применяться не будут. Сообщением от 16 марта 2018 г. № 285 
+            МВД России информирует, постановление Правительства РФ от 22 декабря 2018 г. №1631 устанавливает, что до 
+            1 января 2021 года свидетельства о допуске к перевозке опасных грузов будут выдаваться без истребования 
+            документа об официальном утверждении типа цистерны.
+        </p>
+        <p>
+            В связи с принятием указанного нормативного правового акта ПАО «НЕФАЗ» прекращает выдачу Свидетельства 
+            об официальном утверждении типа цистерны и Свидетельства об испытании или проверке. 
+        </p>
+        <p>
+            Телефон для справок: 8 (34783) 6-25-61  Газиев Халил Хайдарович.
+        </p>
+    </div>
+    <div class="map-responsive" style="border: 1 solid;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17800.48357147245!2d54.28056012277876!3d56.104173160524766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e0a11b21c7cd09%3A0x48fece9c55ba0a59!2z0L3QtdGE0LDQtyA5Njc0MiAwMjAwMzEw!5e0!3m2!1sru!2sru!4v1685597892910!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <footer>
+        <div>&copy; Козицкий Владислав, ФБИ-12, 2 курс, 2023</div>
+    </footer>
+    
+</body>
+</html>
